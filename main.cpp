@@ -112,7 +112,7 @@ PyObject* handleFunction(PyObject* self, PyObject* args)
 int main(int argc, char* argv[])
 {
 	std::string err;
-	if (!pyLoad("python3.dll", &err)) {
+	if (!pyLoadLib("python3.dll", &err)) {
 		printf("%s\n", err.c_str());
 		return 0;
 	}
@@ -150,7 +150,7 @@ int main(int argc, char* argv[])
 	Py_DecRef(pCode);
 	Py_Finalize();
 
-	pyUnload();
+	pyUnloadLib();
 	return 0;
 }
 

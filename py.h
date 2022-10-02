@@ -425,6 +425,6 @@ inline void Py_XDECREF(PyObject* op) {
 #define Py_eval_input 258
 #define Py_func_type_input 345
 
-bool pyLoad(const char* libPath, std::string* pError = nullptr);
-bool pyUnload(std::string* pError = nullptr);
+bool pyLoadLib(const char* libPath, std::string* pError = nullptr);
+bool pyUnloadLib(std::string* pError = nullptr);
 
